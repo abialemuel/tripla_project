@@ -1,0 +1,12 @@
+title: Tripla ERD
+attributes:
+  - content
+  - primary_keys
+  - foreign_keys
+  - inheritance
+orientation: vertical
+filename: docs/database_diagram
+filetype: png
+notation: uml
+sort: false
+prepend_primary: true

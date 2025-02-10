@@ -1,0 +1,1121 @@
+{
+	"info": {
+		"_postman_id": "a9e8e684-1cec-49e5-a7c6-3607d2d44887",
+		"name": "Tripla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27112936"
+	},
+	"item": [
+		{
+			"name": "Auth login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Auth login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Alice\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"e342cf4353b37889b8599b0eddfb31a9\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "d5a812ce-e376-4e59-983e-58e3f3cdeea2"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.222249"
+						},
+						{
+							"key": "server-timing",
+							"value": "sql.active_record;dur=55.08, start_processing.action_controller;dur=0.01, instantiation.active_record;dur=6.11, render.active_model_serializers;dur=0.04, process_action.action_controller;dur=72.69"
+						},
+						{
+							"key": "Content-Length",
+							"value": "126"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MzkyOTg4NjN9.wBxrlGZYAZKvxHMUrsqvvmKAroPpq2SFTGVf0WMlG7Q\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Auth me",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/auth/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Auth login Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"8f900f8546469e756419bb87aa454c1b\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "09ad953e-ddc5-4e05-a75a-f834d85fb6cf"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.213803"
+						},
+						{
+							"key": "server-timing",
+							"value": "sql.active_record;dur=53.23, start_processing.action_controller;dur=0.01, instantiation.active_record;dur=9.66, render.active_model_serializers;dur=0.36, process_action.action_controller;dur=76.51"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Alice\",\n    \"follower_count\": 1,\n    \"following_count\": 2,\n    \"created_at\": \"2025-02-10T14:47:17.179Z\",\n    \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Auth me Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"fb2da3c35967f1d8457240172d896c3d\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "31393146-d6c8-4319-beb0-e903a945f79d"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.010338"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.00, sql.active_record;dur=1.79, instantiation.active_record;dur=0.03, render.active_model_serializers;dur=0.42, process_action.action_controller;dur=6.65"
+						},
+						{
+							"key": "Content-Length",
+							"value": "679"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Bob\",\n        \"follower_count\": 1,\n        \"following_count\": 1,\n        \"created_at\": \"2025-02-10T14:47:17.189Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.189Z\"\n    },\n    {\n        \"name\": \"Charlie\",\n        \"follower_count\": 2,\n        \"following_count\": 1,\n        \"created_at\": \"2025-02-10T14:47:17.211Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.211Z\"\n    },\n    {\n        \"name\": \"David\",\n        \"follower_count\": 1,\n        \"following_count\": 1,\n        \"created_at\": \"2025-02-10T14:47:17.222Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.222Z\"\n    },\n    {\n        \"name\": \"Alice\",\n        \"follower_count\": 1,\n        \"following_count\": 3,\n        \"created_at\": \"2025-02-10T14:47:17.179Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n    },\n    {\n        \"name\": \"Eve\",\n        \"follower_count\": 2,\n        \"following_count\": 1,\n        \"created_at\": \"2025-02-10T14:47:17.228Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.228Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All users Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"8f900f8546469e756419bb87aa454c1b\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "45b96ce9-44f7-4b87-b66a-ce2d7f72e4f3"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.025599"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=3.21, instantiation.active_record;dur=0.04, render.active_model_serializers;dur=0.37, process_action.action_controller;dur=11.32"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Alice\",\n    \"follower_count\": 1,\n    \"following_count\": 2,\n    \"created_at\": \"2025-02-10T14:47:17.179Z\",\n    \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Follow user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/5/follow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5",
+						"follow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/5/follow",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5",
+								"follow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"e234a33b491f709262accb9efbcb0735\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "335d37f8-40de-4f66-b6d5-e20e9274c9fd"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.027210"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=14.21, instantiation.active_record;dur=0.07, start_transaction.active_record;dur=0.00, transaction.active_record;dur=7.12, render.active_model_serializers;dur=0.03, process_action.action_controller;dur=19.65"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You are now following Eve\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Unfollow user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/5/unfollow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5",
+						"unfollow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Follow user Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/5/unfollow",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5",
+								"unfollow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"60bf96f73a9887906f88c79768b5aed4\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "580d59cd-ecbf-4f7d-bc62-d3c7614de1eb"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.026896"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=12.88, instantiation.active_record;dur=0.06, start_transaction.active_record;dur=0.00, transaction.active_record;dur=6.63, render.active_model_serializers;dur=0.03, process_action.action_controller;dur=17.39"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You have unfollowed Eve\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User clock in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/clock_in",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"clock_in"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Follow user Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/clock_in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"clock_in"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"89c8f068ada47dd26fb6b7405cb8b3dc\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "46f85fc8-6bb1-4e65-96a7-20a452da576f"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.244682"
+						},
+						{
+							"key": "server-timing",
+							"value": "sql.active_record;dur=68.36, start_processing.action_controller;dur=0.00, instantiation.active_record;dur=7.16, start_transaction.active_record;dur=0.00, transaction.active_record;dur=3.45, render.active_model_serializers;dur=0.41, process_action.action_controller;dur=91.19"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"clock_in\": \"2025-02-10T16:39:50.836Z\",\n    \"clock_out\": null,\n    \"duration\": 0,\n    \"user\": {\n        \"name\": \"Alice\",\n        \"follower_count\": 1,\n        \"following_count\": 2,\n        \"created_at\": \"2025-02-10T14:47:17.179Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User clock out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/clock_out",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"clock_out"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User clock in Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/clock_out",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"clock_out"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1362c977c27c1ce272d32c63619a8598\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "7287792e-4d36-483a-aac7-acbbc7503c7d"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.033365"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.00, sql.active_record;dur=13.83, instantiation.active_record;dur=0.45, start_transaction.active_record;dur=0.00, transaction.active_record;dur=5.02, render.active_model_serializers;dur=0.42, process_action.action_controller;dur=21.69"
+						},
+						{
+							"key": "Content-Length",
+							"value": "242"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"clock_in\": \"2025-02-10T16:39:50.836Z\",\n    \"clock_out\": \"2025-02-10T16:40:36.470Z\",\n    \"duration\": 45,\n    \"user\": {\n        \"name\": \"Alice\",\n        \"follower_count\": 1,\n        \"following_count\": 2,\n        \"created_at\": \"2025-02-10T14:47:17.179Z\",\n        \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get sleeps data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/following_sleep_records",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"following_sleep_records"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/following_sleep_records",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"following_sleep_records"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"afb85301960ca1b4ceb9ba89db5bbd87\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "b5bc8f5f-f2b3-4e53-b792-80bdd8998b2b"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.039120"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.00, sql.active_record;dur=8.44, instantiation.active_record;dur=0.11, render.active_model_serializers;dur=0.55, process_action.action_controller;dur=29.43"
+						},
+						{
+							"key": "Content-Length",
+							"value": "493"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"clock_in\": \"2025-02-10T06:47:17.339Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.339Z\",\n        \"duration\": 28800,\n        \"user\": {\n            \"name\": \"Charlie\",\n            \"follower_count\": 2,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.211Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.211Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"clock_in\": \"2025-02-10T07:47:17.334Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.334Z\",\n        \"duration\": 25200,\n        \"user\": {\n            \"name\": \"Bob\",\n            \"follower_count\": 1,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.189Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.189Z\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get all clocked in",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/clocked_in_times",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"clocked_in_times"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get sleeps data Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/users/clocked_in_times",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"clocked_in_times"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"28d5b29a0949224b2c5b1bb0129b8916\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "afe0c645-83e4-475f-9442-56dda410cc91"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.030926"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.00, sql.active_record;dur=12.65, instantiation.active_record;dur=0.19, render.active_model_serializers;dur=18.83, process_action.action_controller;dur=22.20"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1692"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 7,\n        \"clock_in\": \"2025-02-10T16:39:50.836Z\",\n        \"clock_out\": \"2025-02-10T16:40:36.470Z\",\n        \"duration\": 45,\n        \"user\": {\n            \"name\": \"Alice\",\n            \"follower_count\": 1,\n            \"following_count\": 2,\n            \"created_at\": \"2025-02-10T14:47:17.179Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"clock_in\": \"2025-02-10T16:38:56.440Z\",\n        \"clock_out\": null,\n        \"duration\": 0,\n        \"user\": {\n            \"name\": \"Alice\",\n            \"follower_count\": 1,\n            \"following_count\": 2,\n            \"created_at\": \"2025-02-10T14:47:17.179Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"clock_in\": \"2025-02-10T04:47:17.352Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.352Z\",\n        \"duration\": 36000,\n        \"user\": {\n            \"name\": \"Eve\",\n            \"follower_count\": 1,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.228Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.228Z\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"clock_in\": \"2025-02-10T05:47:17.346Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.346Z\",\n        \"duration\": 32400,\n        \"user\": {\n            \"name\": \"David\",\n            \"follower_count\": 1,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.222Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.222Z\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"clock_in\": \"2025-02-10T06:47:17.339Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.339Z\",\n        \"duration\": 28800,\n        \"user\": {\n            \"name\": \"Charlie\",\n            \"follower_count\": 2,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.211Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.211Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"clock_in\": \"2025-02-10T07:47:17.334Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.334Z\",\n        \"duration\": 25200,\n        \"user\": {\n            \"name\": \"Bob\",\n            \"follower_count\": 1,\n            \"following_count\": 1,\n            \"created_at\": \"2025-02-10T14:47:17.189Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.189Z\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"clock_in\": \"2025-02-10T08:47:17.319Z\",\n        \"clock_out\": \"2025-02-10T14:47:17.319Z\",\n        \"duration\": 21600,\n        \"user\": {\n            \"name\": \"Alice\",\n            \"follower_count\": 1,\n            \"following_count\": 2,\n            \"created_at\": \"2025-02-10T14:47:17.179Z\",\n            \"updated_at\": \"2025-02-10T14:47:17.179Z\"\n        }\n    }\n]"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MzkyODY0NjR9.DvODfm0QVifEufSDEeqgP8orF-nbtB7Vvcj_TKqAPgk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
