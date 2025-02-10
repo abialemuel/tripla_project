@@ -19,6 +19,6 @@ class AuthController < ApplicationController
   private
 
   def generate_jwt(user_id)
-    JWT.encode({ user_id: user_id, exp: 24.hours.from_now.to_i }, Rails.application.credentials.secret_key_base || ENV["JWT_SECRET"], "HS256")
+    JWT.encode({ user_id: user_id, exp: 24.hours.from_now.to_i }, ENV["JWT_SECRET"], "HS256")
   end
 end
