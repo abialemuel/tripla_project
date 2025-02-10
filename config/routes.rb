@@ -13,6 +13,19 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    collection do
+      get "following_sleep_records", to: "users#following_sleep_records"
+      post "clock_in", to: "users#clock_in"
+      post "clock_out", to: "users#clock_out"
+      get "clocked_in_times", to: "users#clocked_in_times"
+    end
+    member do
+      post "follow", to: "users#follow"
+      delete "unfollow", to: "users#unfollow"
+    end
+  end
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

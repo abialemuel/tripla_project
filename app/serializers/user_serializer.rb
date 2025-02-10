@@ -1,3 +1,3 @@
 class UserSerializer < BaseSerializer
-  attributes :id, :name, :created_at, :updated_at
+  attributes :name, :follower_count, :following_count, :created_at, :updated_at
 end
