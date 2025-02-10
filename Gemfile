@@ -30,6 +30,8 @@ gem "kamal", require: false
 gem "thruster", require: false
 
 gem "jwt"
+gem "rspec-rails"
+gem "shoulda-matchers"
 gem "active_model_serializers"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
