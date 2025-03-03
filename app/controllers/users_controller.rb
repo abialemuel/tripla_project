@@ -39,27 +39,38 @@ class UsersController < ApplicationController
 
   # GET /users/following_sleep_records
   def following_sleep_records
-    sleeps = Sleep.includes(:user)
-                  .where(user_id: current_user.following.pluck(:id))
+    sleeps = Sleep.joins(:user)
+                  .where(user_id: User.select(:id).where(id: current_user.following))
                   .where("clock_in >= ?", 1.week.ago)
                   .order(Arel.sql("clock_out - clock_in DESC, clock_in DESC"))
+                  .limit(100)
     render json: sleeps
   end
 
   # POST /users/clock_in
   def clock_in
-    sleep_record = current_user.sleeps.create(clock_in: Time.current)
+    ActiveRecord::Base.transaction do
+      current_user.lock!  # Lock the user to prevent concurrent clock-ins
 
-    if sleep_record.persisted?
-      render json: sleep_record, serializer: SleepSerializer, status: :created
-    else
-      render json: { error: sleep_record.errors.full_messages }, status: :unprocessable_entity
+      if current_user.sleeps.where(clock_out: nil).exists?
+        render json: { error: "You have an active sleep record. Clock out first." }, status: :unprocessable_entity
+        return
+      end
+
+      sleep_record = current_user.sleeps.create(clock_in: Time.current)
+
+      if sleep_record.persisted?
+        render json: sleep_record, serializer: SleepSerializer, status: :created
+      else
+        render json: { error: sleep_record.errors.full_messages }, status: :unprocessable_entity
+      end
     end
   end
 
   # POST /users/clock_out
   def clock_out
-    sleep_record = current_user.sleeps.where(clock_out: nil).order(clock_in: :desc).first
+    # Lock the record to prevent race conditions
+    sleep_record = current_user.sleeps.where(clock_out: nil).order(clock_in: :desc).lock("FOR UPDATE").first
 
     if sleep_record
       sleep_record.update(clock_out: Time.current)
